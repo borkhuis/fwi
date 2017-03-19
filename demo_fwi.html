@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>   
+    <title>FWI Demo 3 - Picassa Webalbum Integrator (FWI)</title>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <link   href="js/jquery.colorbox/example1/colorbox.css" rel="stylesheet" type="text/css"/>
+  <script src="js/jquery.colorbox/jquery.colorbox-min.js" type="text/javascript"></script>
+
+  <link   href="css/fwi.css" rel="stylesheet" type="text/css"/>
+  <script src="js/jquery.fwi.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        var settings = {
+          username: '66956608@N06',
+          mode: 'albums',
+          albums: [],
+          maxResults: 21,
+          thumbSize: 150,
+          albumThumbSize: 150,
+          sortAlbums: "none",
+          sortPhotos: "none",
+          thumbCrop: true,
+          showPermaLink: false,
+          useQueryParameters: true,
+          colorbox_config: {
+            config_photos: {
+              current: "Foto {current} van {total}",
+              previous: "vorige",
+              next: "volgende",
+              close: "sluiten"
+            }
+          } //-- overrule defaults if needed
+          
+        };
+        $("#container1").fwi(settings);
+        
+          
+      });
+    </script>
+  </head>
+  <body style="font-family:arial">
+    <h3>FWI Demo 3</h3>
+
+    <div id="container1"> </div>
+
+  </body>
+</html>
